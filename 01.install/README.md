@@ -56,7 +56,6 @@ kafka-console-producer.sh \
 다른 cmd창을 통해 client pod에 접속 후, console consumer를 통해 'hellow 123' message 확인
 ```commandline
 kafka-console-consumer.sh \
---consumer.config /tmp/client.properties \
 --bootstrap-server my-kafka.kafka-demo.svc.cluster.local:9092 \
 --topic test \
 --from-beginning
