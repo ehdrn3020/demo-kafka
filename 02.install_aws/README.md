@@ -2,9 +2,11 @@
 
 ### 스크립트를 통해 스팟 인스턴스를 생성
 ```commandline
-'.env' 파일을 통해 aws 설정 값 변경
+env_file_example.txt 파일을 통해 .env파일생성
+.env 파일에 적절한 aws 설정 값으로 수정
+
 cd 02.install_aws/
-sh ./02.install_aws/setup_ec2.sh ${EC2_NAME}
+sh ./setup_ec2.sh ${EC2_NAME}
 ```
 
 ### etc/hosts 설정

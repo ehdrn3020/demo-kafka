@@ -25,7 +25,8 @@ spot_instance_request_id=$(aws ec2 request-spot-instances \
         \"InstanceType\": \"$INSTANCE_TYPE\",
         \"SubnetId\": \"$SUBNET_ID\",
         \"SecurityGroupIds\": [\"$SECURITY_GROUP_IDS\"],
-        \"KeyName\": \"$KEY_NAME\"
+        \"KeyName\": \"$KEY_NAME\",
+        \"UserData\": \"$USER_SCRIPT\"
     }" \
     --spot-price $SPOT_PRICE \
     --query 'SpotInstanceRequests[0].SpotInstanceRequestId' \
@@ -46,4 +47,4 @@ aws ec2 create-tags \
     --tags Key=Name,Value=$ec2_name
 
 # 생성된 Spot 인스턴스 확인
-# aws ec2 describe-spot-instance-requests
+aws ec2 describe-spot-instance-requests
