@@ -16,6 +16,9 @@ export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 export AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
 
+# 사용자 스크립트 내용을 base64로 인코딩
+USER_SCRIPT=$(cat user_script.sh | base64)
+
 # Spot 인스턴스 생성
 spot_instance_request_id=$(aws ec2 request-spot-instances \
     --instance-count 1 \
