@@ -66,7 +66,9 @@ keypair.pem파일 없이 ssh 접근가능하게 키 등록
 - ssh-add keypair.pem
 
 ssh 접속확인 ( 모든 서버 한번씩 )
-- [ec2-user@kafka01] ssh ec2-user@kafka02
+- $ ssh ec2-user@dgk-zk01.co.kr
+- $ ssh ec2-user@dgk-zk02.co.kr
+- $ ssh ec2-user@dgk-zk03.co.kr
 ```
 
 ### zookeper 설치 
