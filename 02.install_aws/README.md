@@ -34,9 +34,12 @@ ssh -i /Users/my/key.pem ec2-user@15.155.174.11
 ```commandline
 카프카 서버의 /etc/hosts/의 내용을 "privateip 호스트명" 으로 설정한다.
 - 예시)
-172.31.44.51 kafka01
-172.31.44.52 kafka02
-172.31.44.53 kafka03
+172.31.44.51 dgk-zk01
+172.31.44.52 dgk-zk02
+172.31.44.53 dgk-zk03
+172.31.44.51 dgk-kafka01
+172.31.44.52 dgk-kafka02
+172.31.44.53 dgk-kafka03
 
 접속확인 
 - [ec2-user@kafka01] ping -c 2 ec2-user@kafka02
@@ -62,6 +65,13 @@ keypair.pem파일 없이 ssh 접근가능하게 키 등록
 - ssh-agent bash
 - ssh-add keypair.pem
 
-ssh 접속확인
+ssh 접속확인 ( 모든 서버 한번씩 )
 - [ec2-user@kafka01] ssh ec2-user@kafka02
+```
+
+### zookeper 설치 
+```commandline
+cd demo-kafka/03.ansible/
+ansible-playbook -i hosts zookeeper.yml
+sudo systemctl status zookeeper-server
 ```

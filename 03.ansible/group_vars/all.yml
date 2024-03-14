@@ -1,0 +1,6 @@
+user_name: ec2-user
+krb_realm: CO.KR
+krb_dns: co.kr
+kadmin_pass: dgk
+kdc_server: dgk-zk01
+kafkaversion: 2.6.0
