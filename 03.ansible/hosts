@@ -1,9 +1,9 @@
 [zkhosts]
-dgk-zk01
-dgk-zk02
-dgk-zk03
+dgk-zk01.co.kr
+dgk-zk02.co.kr
+dgk-zk03.co.kr
 
 [kafkahosts]
-dgk-kafka01
-dgk-kafka02
-dgk-kafka03
+dgk-kafka01.co.kr
+dgk-kafka02.co.kr
+dgk-kafka03.co.kr

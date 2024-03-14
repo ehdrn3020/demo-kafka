@@ -6,5 +6,5 @@ clientPort=2181
 autopurge.snapRetainCount=3
 autopurge.purgeInterval=1
 {% for host in groups['zkhosts'] %}
-server.{{ host | regex_search('(dgk-zk0[1-9])') | regex_replace('^dgk-zk0', '') }}={{ host }}:2888:3888;2181
+server.{{ host | regex_search('(dgk-zk0[1-9])') | regex_replace('\\.co\\.kr', '') | regex_replace('^dgk-zk0', '') }}={{ host }}:2888:3888;2181
 {% endfor %}
