@@ -1,0 +1,9 @@
+[zkhosts]
+dgk-zk01
+dgk-zk02
+dgk-zk03
+
+[kafkahosts]
+dgk-kafka01
+dgk-kafka02
+dgk-kafka03

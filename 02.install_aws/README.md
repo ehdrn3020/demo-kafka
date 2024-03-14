@@ -61,6 +61,7 @@ keypair.pem파일 없이 ssh 접근가능하게 키 등록
 - 아래 명령어 실행
 - ssh-agent bash
 - ssh-add keypair.pem
+
 ssh 접속확인
 - [ec2-user@kafka01] ssh ec2-user@kafka02
 ```
