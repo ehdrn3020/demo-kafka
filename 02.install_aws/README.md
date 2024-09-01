@@ -34,15 +34,15 @@ ssh -i /Users/my/key.pem ec2-user@15.155.174.11
 ```commandline
 카프카 서버의 /etc/hosts/의 내용을 "privateip 호스트명" 으로 설정한다.
 - 예시)
-172.31.44.51 dgk-zk01
-172.31.44.52 dgk-zk02
-172.31.44.53 dgk-zk03
-172.31.44.51 dgk-kafka01
-172.31.44.52 dgk-kafka02
-172.31.44.53 dgk-kafka03
+172.31.42.197 dgk-zk01.co.kr dgk-zk01
+172.31.35.71 dgk-zk02.co.kr dgk-zk02
+172.31.47.70 dgk-zk03.co.kr dgk-zk03
+172.31.42.197 dgk-kafka01.co.kr dgk-kafka01
+172.31.35.71 dgk-kafka02.co.kr dgk-kafka02
+172.31.47.70 dgk-kafka03.co.kr dgk-kafka03
 
 접속확인 
-- [ec2-user@kafka01] ping -c 2 ec2-user@kafka02
+- [ec2-user@kafka01] ping -c 2 dgk-kafka02
 ```
 
 ### aws keypair.pem 파일 복사
@@ -54,8 +54,8 @@ aws cli로 로컬에서 ec2(ansible 배포서버)에 복사
 - chmod 600 keypair.pem
 - scp -i keypair.pem keypair.pem ec2-user@15.155.174.11:~
 
-ec2에 접속하여 keypair.pem를 이용해 ssh 접속
-- [ec2-user@kafka01] ssh -i keypair.pem ec2-user@kafka02
+ec2에 접속하여 keypair.pem를 이용해 ssh 접속 확인
+- [ec2-user@kafka01] ssh -i keypair.pem ec2-user@dgk-kafka02
 
 keypair.pem파일 없이 ssh 접근가능하게 키 등록 
 - 등록시 -i keypair.pem 옵션이 없이도 접근가능

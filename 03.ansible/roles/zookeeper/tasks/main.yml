@@ -12,8 +12,8 @@
 
 - name: stop zookeeper-server
   systemd:
-    state: stopped
     name: zookeeper-server
+    state: stopped
   ignore_errors: yes
 
 - name: remove directory zk
