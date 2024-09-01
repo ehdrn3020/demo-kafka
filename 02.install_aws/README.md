@@ -69,6 +69,9 @@ ssh 접속확인 ( 모든 서버 한번씩 )
 - $ ssh ec2-user@dgk-zk01.co.kr
 - $ ssh ec2-user@dgk-zk02.co.kr
 - $ ssh ec2-user@dgk-zk03.co.kr
+- $ ssh ec2-user@dgk-kafka01.co.kr
+- $ ssh ec2-user@dgk-kafka02.co.kr
+- $ ssh ec2-user@dgk-kafka03.co.kr
 ```
 
 ### zookeper 설치 
