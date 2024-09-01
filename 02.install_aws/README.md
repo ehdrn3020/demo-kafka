@@ -77,3 +77,9 @@ cd demo-kafka/03.ansible/
 ansible-playbook -i hosts zookeeper.yml
 sudo systemctl status zookeeper-server
 ```
+
+### kafka 설치
+```commandline
+ansible-playbook -i hosts kafka.yml
+sudo systemctl status kafka-server
+```
